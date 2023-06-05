@@ -1,0 +1,29 @@
+<a href="/" class="btn btn-info" style="margin-top:5px;">Back</a>
+
+<div class="card">
+  <h3>Student Login</h3>
+  <p class="text-danger fw-bold text-center">( * ) fields are mandatory</p>
+  <hr/>
+  <form method="POST" class="teachForm">
+      <div class="mb-3">
+        <label for="RollNo" class="form-label"  >Roll no <span class="text-danger fw-bold">*</span> :  </label>
+        <input type="number" name="roll" class="form-control" id="RollNo" onkeyup="manageBtn(this)">
+      </div>
+      <div class="mb-3">
+        <label for="DOB" class="form-label" >Date of Birth <span class="text-danger fw-bold">*</span> : </label>
+        <input type="date" name="dob" class="form-control" id="DOB" onkeyup="manageBtn(this)">
+      </div>
+      <a><button type="submit" id="btnSubmit" class="btn btn-primary" disabled>Submit</button></a>
+  </form>
+</div>
+<script>
+function manageBtn(txt) {
+  var btn = document.getElementById('btnSubmit');
+  if (RollNo.value != 0 &&  DOB.value != '' ) {
+  btn.disabled = false;
+  }
+  else {
+  btn.disabled = true;
+  }
+  }
+  </script>
